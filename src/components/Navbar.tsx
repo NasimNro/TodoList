@@ -7,7 +7,7 @@ const Navbar = () => {
         <img src={appIcon} className="h-10 w-10" alt="App Icon" />
       </div>
       <div className="w-1/3 flex justify-center">
-        <h1 className="text-2xl">DodoList App</h1>
+        <h1 className="text-2xl">TodoList App</h1>
       </div>
       <div className="w-1/3 flex justify-end pr-4 hover:underline">
         <a className="text-xl" target="_blank" href="https://www.google.com/">Source Code</a>

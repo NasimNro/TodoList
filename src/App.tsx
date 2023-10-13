@@ -10,8 +10,6 @@ function App() {
   // Definiere den initialen Zustand deiner Komponente
   const [inputValue, setInputValue] = useState(""); // Der eingegebene Text für ein neues To-Do
   const [todos, setTodos] = useState<{ text: string; date: string }[]>([]); // Die Liste der To-Do-Elemente
-  const [inputType, setInputType] = useState(""); // Der Typ des Eingabefelds (Text oder Datum)
-
   const [showDate, setShowDate] = useState(""); // Das ausgewählte Datum
   const [onEditClick, setEditClick] = useState(-1); // Der Index des bearbeiteten To-Do-Elements
 
