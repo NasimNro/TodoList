@@ -18,23 +18,23 @@ const TodoElement = ({
   handleEditTodo,
 }: props) => {
   return (
-    <div className="Todos-Container  w-3/4 flex flex-col justify-center container items-center sm:w-11/12 ">
+    <div className="Todos-Container  w-3/4 flex flex-col justify-center  items-center sm:w-11/12 ">
       {filteredTodos.map((todo, index) => {
         return (
           <>
             <div
               key={index}
-              className="Todo-container flex  items-center h-20 border-l border-r border-t border-b  w-full mt-2 rounded-md shadow-xl backdrop-blur-sm bg-[#6d94cf]"
+              className="Todo-container flex  items-center h-20 border-l border-r border-t border-b  w-full mt-2 rounded-md shadow-xl backdrop-blur-sm bg-[#6d94cf] sm:mt-0"
             >
-              <div className="w-6/12  ml-2 container">
+              <div className="w-6/12  ml-2 ">
                 <p className="break-all  ml-2  sm:text-sm">{todo.text}</p>
               </div>
-              <div className="w-3/12 container sm:w-4/12">
+              <div className="w-3/12  sm:w-4/12">
                 <p className="flex justify-end sm:text-sm">
                   {todo.date ? `Til: ${todo.date}` : ""}
                 </p>
               </div>
-              <div className="w-3/12 flex  container justify-end pr-2 h-16 items-center sm:items-end sm:flex-col sm:justify-center sm:space-y-1   sm:h-20 sm:w-2/12  ">
+              <div className="w-3/12 flex justify-end pr-2 h-16 items-center sm:items-end sm:flex-col sm:justify-center sm:space-y-1   sm:h-20 sm:w-2/12  ">
                 <button
                   onClick={() =>
                     onEditClick == index

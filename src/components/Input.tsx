@@ -20,9 +20,9 @@ const Input = ({
 
 
   return (
-    <div className="space-x-4 flex justify-between input-container w-3/4 sm:w-11/12  mb-16 sm:mb-6">
+    <div className="space-x-4 flex rounded-md justify-between input-container w-3/4 sm:w-11/12 sm:h-12 sm:items-center  mb-16 sm:mb-6 sm:bg-[#6d94cf]">
       <input
-        className="bg-[#e7eaf6] required: rounded-md h-16 w-8/12 pl-2 font-medium sm:h-8 sm:w-6/12 sm:text-sm"
+        className="bg-[#e7eaf6] required: rounded-md h-16 w-8/12 pl-2 font-medium sm:h-8 sm:w-6/12 sm:text-sm sm:ml-1"
         onChange={handleInput}
         type="text"
         value={inputValue}
@@ -35,15 +35,16 @@ const Input = ({
           placeholder="Due to"
           value={showDate}
           onChange={handleDateInput}
-          onFocus={() => {setInputType("date");}}
+          onFocus={() => {
+            setInputType("date");
+          }}
           onBlur={() => setInputType("text")}
           ref={dateInputRef}
-          
         ></input>
       </div>
-      <div className="container flex justify-end add-cotainer w-1/12 sm:h-8 ">
+      <div className=" flex justify-end add-cotainer w-1/12 sm:h-8 ">
         <button
-          className="bg-[#38598b]  rounded-md sm:h-8 w-16 sm:text-sm sm:w-20"
+          className="bg-[#38598b]  rounded-md sm:h-8 w-20 sm:text-sm min-w-[2.4rem] sm:mr-1"
           onClick={handleAdd}
         >
           Add
