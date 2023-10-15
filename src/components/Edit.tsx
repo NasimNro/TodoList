@@ -14,7 +14,7 @@ function Edit({ onEdit }: EditProps) {
   };
 
   return (
-    <div className="edit-container container h-20 border-l  border-r border-t border-b  mb-4 rounded-md shadow-xl backdrop-blur-sm bg-[#f0e4c5] items-center flex sm:h-14">
+    <div className="edit-container container h-20 border-l  border-r border-t border-b  mb-4 rounded-md shadow-xl backdrop-blur-sm bg-[#f0e4c5] items-center flex sm:h-14 sm:mb-1">
       <div className="w-7/12">
         <input
           className="bg-[#e7eaf6]  rounded-md h-12 w-4/5 ml-2 pl-2 font-medium sm:text-xs sm:h-10"

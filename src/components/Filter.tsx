@@ -17,7 +17,7 @@ function Filter({searchType, filterText, setFilterText, filterDate, setFilterDat
   
   
   return (
-    <div className="Filter-container flex flex-row just w-3/4 bg-[#a2a8d3] h-12 rounded-md sm:w-11/12 sm:h-8 ">
+    <div className="Filter-container flex flex-row just w-3/4 bg-[#a2a8d3] h-12 rounded-md sm:w-11/12 sm:h-6 ">
       <div className="flex flex-row w-full">
         <input
           className=" rounded-md h-10 mr-2 pl-2 sm:h-6  sm:w-5/12 sm:text-xs"
