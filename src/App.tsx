@@ -118,7 +118,7 @@ function App() {
 
   return (
     <>
-      <div className="font-semibold App-container bg-[#a2a8d3] min-h-screen w-full flex flex-col items-center">
+      <div className="font-semibold App-container  bg-[#a2a8d3] min-h-screen w-full flex flex-col items-center">
         <Navbar />
         <Input
           handleInput={handleInput}
@@ -144,7 +144,8 @@ function App() {
           onEditClick={onEditClick}
           setEditClick={setEditClick}
           handleRemove={handleRemove}
-          handleEditTodo={handleEditTodo}  />
+          handleEditTodo={handleEditTodo}
+        />
       </div>
     </>
   );
