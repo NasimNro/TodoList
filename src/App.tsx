@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 
-import "./App.css";
 import Navbar from "./components/Navbar";
 import Filter from "./components/Filter";
 import Input from "./components/Input";
 import TodoElement from "./components/TodoElement";
+import Registration from "./components/Registration";
+import Login from "./components/Login";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   // Definiere den initialen Zustand deiner Komponente
@@ -116,9 +118,43 @@ function App() {
     }
   }, []);
 
+    const handleRegistration = (formData: any) => {
+      const { name, Email, username, password } = formData;
+      
+      // Assuming you have a registration API endpoint
+      fetch('http://localhost:5000/register', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          Email,
+          username,
+          password,
+        }),
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Handle successful registration
+            console.log("User registered successfully");
+          } else {
+            // Handle registration error
+            console.error("Error registering user");
+          }
+        })
+        .catch((error) => {
+          // Handle network error
+          console.error("Network error:", error);
+        });
+    };
+
+
   return (
     <>
-      <div className="font-semibold App-container  bg-[#a2a8d3] min-h-screen w-full flex flex-col items-center">
+    <Registration handleSubmit={(e)=> handleRegistration(e)}></Registration>
+    
+      {/* <div className="font-semibold App-container  bg-[#a2a8d3] min-h-screen w-full flex flex-col items-center">
         <Navbar />
         <Input
           handleInput={handleInput}
@@ -146,7 +182,7 @@ function App() {
           handleRemove={handleRemove}
           handleEditTodo={handleEditTodo}
         />
-      </div>
+      </div> */}
     </>
   );
 }
