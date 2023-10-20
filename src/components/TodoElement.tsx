@@ -8,6 +8,7 @@ interface props {
   setEditClick: any;
   handleRemove: any;
   handleEditTodo: any;
+  
 }
 
 const TodoElement = ({
@@ -16,6 +17,7 @@ const TodoElement = ({
   setEditClick,
   handleRemove,
   handleEditTodo,
+
 }: props) => {
   return (
     <div className="Todos-Container  w-3/4 flex flex-col justify-center items-center sm:w-11/12 ">
@@ -68,10 +70,14 @@ const TodoElement = ({
                   handleEditTodo(index, newText, newDate)
                 }
               ></Edit>
+              
             )}
           </>
         );
       })}
+      <div>
+        <button className="bg-red-400 h-10 w-20"> Log Out </button>
+      </div>
     </div>
   );
 };
