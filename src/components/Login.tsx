@@ -1,12 +1,12 @@
-interface props {
-  setlogedInUser: (name: string, id: string) => void;
-}
-import { useState } from "react";
-import useSignIn from "react-auth-kit/hooks/useSignIn";
+import { useState, useContext } from "react";
+import { AppContext } from "../App";
+
 import { Link, Navigate } from "react-router-dom";
 
-const Login = ({ setlogedInUser }:props) => {
-  const signIn = useSignIn()
+  // const [loggedInUser, setlogedInUser] = useContext(AppContext)
+
+
+const Login = () => {
   const handleLogin = (loginData: any) => {
     const { username, password } = loginData;
 
@@ -31,10 +31,8 @@ const Login = ({ setlogedInUser }:props) => {
       .then((data) => {
         console.log("User logged in successfully");
         console.log(data);
+        // setlogedInUser(data.username, data.id)
         
-        
-
-        setlogedInUser(data.username, data.id)
       })
       .catch((error) => {
         console.error("Network error or login failed:", error.message);
@@ -89,7 +87,7 @@ const Login = ({ setlogedInUser }:props) => {
           </div>
         </fieldset>
       </div>
-      {/* {isLoggedIn && <Navigate to="/" />} */}
+      {/* {(loggedInUser.name != "") && <Navigate to="/" />} */}
     </div>
   );
 };

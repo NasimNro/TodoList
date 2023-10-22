@@ -1,7 +1,4 @@
-interface props {
-  user: {name : string, userId: string}
 
-}
 import { useEffect, useState } from "react";
 
 import Navbar from "../components/Navbar";
@@ -10,7 +7,7 @@ import Input from "../components/Input";
 import TodoElement from "../components/TodoElement";
 import React from "react";
 
-const Home = ({user}:props) => {
+const Home = () => {
   const [inputValue, setInputValue] = useState(""); // Der eingegebene Text für ein neues To-Do
   const [todos, setTodos] = useState<{ text: string; date: string }[]>([]); // Die Liste der To-Do-Elemente
   const [showDate, setShowDate] = useState(""); // Das ausgewählte Datum
@@ -127,7 +124,7 @@ const Home = ({user}:props) => {
   return (
     <>
       <div className="font-semibold App-container  bg-[#a2a8d3] min-h-screen w-full flex flex-col items-center">
-        <Navbar username={user.name}/>
+        <Navbar/>
         <Input
           handleInput={handleInput}
           inputValue={inputValue}

@@ -18,7 +18,7 @@ const Input = ({
   const dateInputRef = useRef(null);
   const [inputType, setInputType] = useState(""); 
 
-
+  
   return (
     <div className="space-x-4 flex rounded-md justify-between input-container w-3/4 sm:w-11/12 sm:h-12 sm:items-center  mb-16 sm:mb-6 sm:bg-[#6d94cf]">
       <input
